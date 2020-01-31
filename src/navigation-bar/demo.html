@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul.sidenav {
+            overflow: auto;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 25%;
+            padding: 0;
+            margin: 0;
+            background-color: #f1f1f1;
+            list-style-type: none;
+        }
+
+        ul.sidenav li a {
+            display: block;
+            padding: 8px 16px;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        ul.sidenav li a:hover:not(.active) {
+            background-color: #555;
+            color: #ffffff;
+        }
+
+        ul.sidenav li a.active {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+
+        .content {
+            margin-left: 25%;
+            height: 1000px;
+            padding: 0 25px;
+        }
+
+        @media screen and (max-width: 900px) {
+            ul.sidenav {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            ul.sidenav li a {
+                float: left;
+                padding: 15px;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            ul.sidenav li a {
+                float: none;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+      window.onload = function () {
+        var navmenuItems = document.getElementsByClassName('nav-menu__item');
+        addActive(navmenuItems[1]);
+        addClickEventForAllMenuItems(navmenuItems);
+      };
+
+      function addClickEventForAllMenuItems(navmenuItems) {
+        for (var item of navmenuItems) {
+          item.addEventListener('click', function (e) {
+            removeAllActive(navmenuItems);
+            addActive(e.target.parentElement);
+          });
+        }
+      }
+
+      function addActive(dom) {
+        dom.classList.add('nav-menu__item--active');
+      }
+
+      function removeAllActive(domList) {
+        for (var item of domList) {
+          item.classList.remove('nav-menu__item--active');
+        }
+      }
+    </script>
+</head>
+<body>
+<ul class="sidenav">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
+<div class="content">
+    <h2>Responsive Sidenav Example</h2>
+    <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or
+        less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the
+        navigation links.</p>
+    <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+    <h3>Resize the browser window to see the effect.</h3>
+</div>
+</body>
+</html>

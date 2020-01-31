@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip</title>
+    <style>
+        div {
+            position: relative;
+            cursor: pointer;
+        }
+
+        span {
+            display: none;
+            background-color: green;
+            color: white;
+        }
+
+        div:hover span {
+            display: block;
+            position: absolute;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div title="The Tooltip Information...">
+    Hover to show tooltip.
+    <span>The Tooltip Information...</span>
+</div>
+</body>
+</html>
