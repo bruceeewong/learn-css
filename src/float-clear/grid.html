@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Float to create grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .clearfix {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .box {
+            float: left;
+            width: 33.3%;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .grey1 {
+            background-color: #aaa;
+        }
+
+        .grey2 {
+            background-color: #ccc;
+        }
+
+        .grey3 {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<div class="container clearfix">
+    <div class="box grey1">Box1</div>
+    <div class="box grey2">Box2</div>
+    <div class="box grey3">Box3</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+    background-color: lightblue;
+    background-image: url("../assets/background.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+
+    /* shorthand */
+    /*background: lightblue url("../assets/background.jpg") no-repeat fixed center center;*/
+}

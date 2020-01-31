@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clear Fix Hacks</title>
+    <style>
+        .clearfix1 {
+            overflow: auto;
+        }
+
+        .clearfix2::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        div img {
+            float: right;
+            width: 170px;
+            height: 170px;
+        }
+
+        div {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+<h2>Without clear fix</h2>
+<div>
+    <img src="../assets/background.jpg" alt="background">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor expedita repudiandae? Atque consequatur
+    dignissimos dolore dolorum ducimus et exercitationem laboriosam minus odio quaerat similique unde vitae voluptate
+    voluptatem, voluptatum!
+</div>
+<hr>
+
+<h2>use overflow: auto to clear fix</h2>
+<div class="clearfix1">
+    <img src="../assets/background.jpg" alt="background">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor expedita repudiandae? Atque consequatur
+    dignissimos dolore dolorum ducimus et exercitationem laboriosam minus odio quaerat similique unde vitae voluptate
+    voluptatem, voluptatum!
+</div>
+<hr>
+
+<h2>use pseudo element to clear fix</h2>
+<div class="clearfix2">
+    <img src="../assets/background.jpg" alt="background">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor expedita repudiandae? Atque consequatur
+    dignissimos dolore dolorum ducimus et exercitationem laboriosam minus odio quaerat similique unde vitae voluptate
+    voluptatem, voluptatum!
+</div>
+<hr>
+</body>
+</html>

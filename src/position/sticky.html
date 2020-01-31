@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            padding: 20px;
+            background-color: green;
+            color: white;
+        }
+
+        .sticky-area {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        .placeholder {
+            height: 2000px;
+            margin-top: 20px;
+            background-image: linear-gradient(red, orange, yellow, green, blue, purple);
+        }
+    </style>
+</head>
+<body>
+<h1>
+    Try to scroll inside this frame to understand how sticky positioning works.
+</h1>
+<p>
+    Note: IE/Edge 15 and earlier versions do not support sticky position.
+</p>
+<div class="sticky-area">
+    sticky Area
+</div>
+<section class="placeholder"></section>
+</body>
+</html>

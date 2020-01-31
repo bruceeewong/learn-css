@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table.all-border,
+        table.all-border th,
+        table.all-border td {
+            border: 1px solid black;
+        }
+
+        table.only-outside-border {
+            border: 1px solid black;
+        }
+
+        table.collapse {
+            border-collapse: collapse;
+        }
+
+        table.collapse,
+        table.collapse th,
+        table.collapse td {
+            border: 1px solid black;
+        }
+
+        table.horizontal-divider {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table.horizontal-divider th,
+        table.horizontal-divider td {
+            height: 60px;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table class="all-border">
+    <caption>Border Table</caption>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bruski</td>
+        <td>Wang</td>
+    </tr>
+    <tr>
+        <td>Scar</td>
+        <td>Wang</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+<table class="only-outside-border">
+    <caption>Border Table2</caption>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bruski</td>
+        <td>Wang</td>
+    </tr>
+    <tr>
+        <td>Scar</td>
+        <td>Wang</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+<table class="collapse">
+    <caption>Border Collapse Table</caption>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bruski</td>
+        <td>Wang</td>
+    </tr>
+    <tr>
+        <td>Scar</td>
+        <td>Wang</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+<table class="horizontal-divider">
+    <caption>horizontal-divider Table</caption>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bruski</td>
+        <td>Wang</td>
+    </tr>
+    <tr>
+        <td>Scar</td>
+        <td>Wang</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
