@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Selector</title>
+    <style>
+        section {
+            margin: 10px 0;
+        }
+
+        a[target] {
+            background-color: red;
+        }
+
+        [class="test"] {
+            background-color: orange;
+        }
+
+        [class~="flower"] {
+            background-color: yellow;
+        }
+        [class|="top"] {
+            background-color: green;
+        }
+        [class^="ye"] {
+            background-color: blue;
+        }
+        [class$="sh"] {
+            background-color: purple;
+        }
+        [class*="io"] {
+            background-color: grey;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <h2>a[target]</h2>
+    <p>The [attribute="value"] selector is used to select elements with a specified attribute and value.</p>
+    <a target="_blank">a</a>
+</section>
+<hr>
+<section>
+    <h2>[class=test]</h2>
+    <div class="test">test</div>
+</section>
+<hr>
+<section>
+    <h2>[class~=flower]</h2>
+    <p>The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.</p>
+    <div class="flower">flower</div>
+    <div class="flower other">flower other</div>
+</section>
+<hr>
+<section>
+    <h2>[class|="top"]</h2>
+    <p>The [attribute|="value"] selector is used to select elements with the specified attribute starting with the specified value.</p>
+    <p>Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"!</p>
+    <div class="top">top</div>
+    <div class="top-test">top-test</div>
+</section>
+<hr>
+<section>
+    <h2>[class^=ye]</h2>
+    <p>The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified value.</p>
+    <p>Note: The value does not have to be a whole word!</p>
+    <div class="ye">ye</div>
+    <div class="yeah">yeah</div>
+    <div class="ye-ah">ye-ah</div>
+</section>
+<hr>
+<section>
+    <h2>[class$=sh]</h2>
+    <p>The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.</p>
+    <p>Note: The value does not have to be a whole word!</p>
+    <div class="cash">cash</div>
+    <div class="bash">bash</div>
+</section>
+<hr>
+<section>
+    <h2>[class*=io]</h2>
+    <p>The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.</p>
+    <p>Note: The value does not have to be a whole word!</p>
+    <div class="io">io</div>
+    <div class="io other">io other</div>
+    <div class="io-other">io-other</div>
+    <div class="ioother">ioother</div>
+</section>
+<hr>
+</body>
+</html>

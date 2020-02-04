@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            padding: 20px;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+        }
+
+        input[type=text],
+        select {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 2px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        input[type=text]:focus,
+        select:focus {
+            border-color: #4CAF50;
+        }
+
+        input[type=submit],
+        input[type=reset],
+        button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        input[type=submit]:hover,
+        input[type=reset]:hover,
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h2>Use CSS to style a form</h2>
+<div>
+    <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
