@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .media-block {
+        overflow: auto;
+        width: 400px;
+        background-color: lightgray;
+        border: 1px solid black;
+      }
+      .media-block h1,
+      .media-block p {
+        margin: 0;
+      }
+      .media-fig {
+        float: left;
+        width: 150px;
+        height: 150px;
+        margin-right: 5px;
+        background-color: gray;
+      }
+      .media-body {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media-block">
+      <img class="media-fig"></img>
+      <div class="media-body">
+        <h1>Lorem ipsum dolor sit</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          recusandae at eum quam possimus numquam cumque voluptatum,
+          voluptatibus vitae cum nemo dolores quisquam a dolor ea praesentium
+          aspernatur ad in.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad aperiam impedit quam corporis, aut ipsam natus illo mollitia fuga? Vel asperiores, vero amet impedit similique laborum odio quam tenetur autem.</p>
+      </div>
+    </div>
+    <hr>
+    <p>add "overflow: auto" to media-block and media-body, trigger BFC(block formatting context), let the body part width shrink.</p>
+  </body>
+</html>

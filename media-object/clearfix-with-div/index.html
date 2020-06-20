@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clearfix with extra div element</title>
+    <style>
+      .media-block {
+        width: 400px;
+        background-color: lightgray;
+        border: 1px solid black;
+      }
+      .media-block h1,
+      .media-block p {
+        margin: 0;
+      }
+      .media-fig {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background-color: gray;
+      }
+      .media-body {
+        float: right;
+        max-width: 230px;
+      }
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media-block">
+      <img class="media-fig"></img>
+      <div class="media-body">
+        <h1>Lorem ipsum dolor sit</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          recusandae at eum quam possimus numquam cumque voluptatum,
+          voluptatibus vitae cum nemo dolores quisquam a dolor ea praesentium
+          aspernatur ad in.
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <hr>
+    <p>Add a extra div element with "clear: both" in the media-object block, to fix the height problem of parent element with float children</p>
+  </body>
+</html>
